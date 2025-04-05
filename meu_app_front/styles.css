@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+body {
+    background: url("photos/measuring_tape.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex; /*#flex */
+    align-items: flex-start; /* Alinha os elementos no topo */
+    padding-top: 10px; /* Espaçamento entre o topo da tela e o container */
+}
+
+.medidas {
+    margin: 10;
+    padding: 10px;
+    background: transparent;
+    font-size: 50px;
+    text-align: center;
+    color: #FFF;
+
+}
+
+.container {
+    width: 600px;
+    min-height: 500px;
+    background: transparent;
+    border: 2px solid #9b9b9b;
+    backdrop-filter: blur(20px);
+    border-radius: 10%;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px; /* Dá um espaçamento do topo */
+    margin-left: 40px;
+}
+
+.containerConsulta {
+    width: 600px;
+    min-height: 550px;
+    background: transparent;
+    border: 2px solid #9b9b9b;
+    backdrop-filter: blur(20px);
+    border-radius: 10%;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px; /* Dá um espaçamento do topo */
+    margin-left: 40px;
+}
+
+.containerConsulta.novaMedida {
+    width: 70%;
+
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+    color: #FFF;
+}
+
+.novaMedida {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* Cria duas colunas de tamanho igual */
+    gap: 10px;  /* Espaço entre os elementos */
+    padding: 20px;  /* Espaço interno */
+}
+
+.novaMedida input {
+    width: 100%;    /* Ocupa toda a largura da coluna */
+    padding: 10px;  /* Espaço interno no input */
+    font-size: 16px;    /* Tamanho do texto */
+    border: 1px solid #ccc; /* Borda sutil */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+.salvarMedidas {
+    padding: 10px 20px; /* Tamanho do botão */
+    font-size: 16px;    /* Tamanho da fonte do botão */
+    background-color: #525258;  /* Cor de fundo */
+    color: white;   /* Cor do texto */
+    border: none;   /* Remove a borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer;    /* Aparece o cursor de mão */
+    margin-top: 20px;   /* Espaçamento entre o botão e os outros elementos */
+}
+
+.salvarMedidas:hover {
+    background-color: #45a049;  /* Muda a cor ao passar o mouse */
+}
+
+.error_login {
+    color:red;
+    display: none;
+
+}
+
+.consultarMedidas {
+    padding: 10px 20px; /* Tamanho do botão */
+    font-size: 16px;    /* Tamanho da fonte do botão */
+    background-color: #525258;  /* Cor de fundo */
+    color: white;   /* Cor do texto */
+    border: none;   /* Remove a borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer;    /* Aparece o cursor de mão */
+    margin-top: 20px;   /* Espaçamento entre o botão e os outros elementos */
+    
+}
+
+.consultarMedidas:hover {
+    background-color: #35abe6;  /* Muda a cor ao passar o mouse */
+}
+
+/* Estilo para a tabela */
+.itens {
+    width: 100%;
+    overflow-x: auto; /* adiciona scroll horizontal se necessário */
+    margin-top: 20px;
+}
+
+/* Estilo para a tabela */
+.itens {
+    width: 100%;
+    overflow-x: auto; /* adiciona scroll horizontal se necessário */
+    margin-top: 20px;
+}
+
+/* Estilo para a tabela */
+.itens {
+    width: 100%;
+    overflow-x: auto; /* adiciona scroll horizontal se necessário */
+    margin-top: 20px;
+}
+
+#myTable {
+    width: 80%;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#myTable th,
+#myTable td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+#myTable th {
+    background-color: #525258;
+    color: white;
+}
+
+#myTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#myTable tr:hover {
+    background-color: #e0e0e0;
+}

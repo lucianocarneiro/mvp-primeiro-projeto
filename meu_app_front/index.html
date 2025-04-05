@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <title>Medidas</title>
+
+</head>
+<body>
+    <div class="container">
+
+    <!-- Cabeçalho de informações do sistema -->
+     <header>
+        <div class="medidas">
+            <h1>Cadastro de Medidas</h1>
+        </div>
+     </header>
+
+     <!--Inclusão de novas medidas -->
+     <section class="novaMedida">
+        <input type="text" id="nomeCompleto" placeholder="Nome Completo" title="Informe seu nome completo.">
+        <input type="date" id="dataPesagem" placeholder="DD/MM/AAAA" title="Informe da data no formato DD/MM/AAAA.">
+        <input type="number" id="peso" placeholder="25.5" title="Informe o mesmo peso da data informada.">
+        <input type="number" step="0.01" id="busto" placeholder="11.1" title="Informe a medida do busto da data da pesagem.">
+        <input type="number" step="0.01" id="bracoDireito" placeholder="33.3" title="Informe a medida do braco direito da data da pesagem">
+        <input type="number" step="0.02" id="bracoEsquerdo" placeholder="55.5" title="Informe a medida do braco esquerdo da data da pesagem">
+        <input type="number" step="0.07" id="cintura" placeholder="76.8" title="Informe a medida da cintura da data da pesagem">
+        <input type="number" step="0.07" id="umbigo" placeholder="75.5" title="Informe a medida do umbigo da data da pesagem">
+        <input type="number" step="0.07" id="quadril" placeholder="79.9" title="Informe a medida do quadril da data da pesagem">
+        <input type="number" step="0.07" id="coxaDireita" placeholder="85.6" title="Informe a medida da coxa direita da data da pesagem">
+        <input type="number" step="0.07" id="coxaEsquerda" placeholder="14.4" title="Informe a medida da coxa esqueda da data da pesagem">
+        <input type="number" step="0.07" id="panturrilhaDireita" placeholder="50.0" title="Informe a medida da panturrilha direita da data da pesagem">
+        <input type="number" step="0.07" id="panturrilhaEsquerda" placeholder="36.6" title="Informe a medida da panturrilha esqueda da data da pesagem">
+     </section>
+
+    <!--Botão de salvar da linha section-->
+    <div class="error_login">Necessário preencher todos os campos do formulário!</div>
+
+    <!--Botão de salvar-->
+    <button onclick="buttonNovaMedida()" class="salvarMedidas">Salvar</button>
+
+    </div>
+    
+    <div class="containerConsulta">
+
+        <div class="medidas">
+            <h1>Consultar Medidas</h1>
+        </div>
+
+        <section class="novaMedida"> 
+            <input type="text" id="nomeConsulta" placeholder="Nome Completo" title="Informe seu nome completo.">
+            <input type="date" id="dataConsulta" placeholder="DD/MM/AAAA" title="Informe da data no formato DD/MM/AAAA.">
+    
+        </section>
+        <!-- Incluir a lista de retorno da consulta quando feito a pesquisa ou incluso um novo registro. -->
+        <section class="itens">
+            <table id="myTable">
+                <tr>
+                    <th>Delete</th>
+                    <th>Nome completo</th>
+                    <th>Data da pesagem</th>
+                    <th>Data criação</th>
+                    <th>Peso</th>
+                    <th>Busto</th>
+                    <th>Braço direito</th>
+                    <th>Braço esquedo</th>
+                    <th>Cintura</th>
+                    <th>Umbigo</th>
+                    <th>Quadril</th>
+                    <th>Coxa direita</th>
+                    <th>Coxa esqueda</th>
+                    <th>Panturrilha direita</th>
+                    <th>Panturrilha esqueda</th>
+                </tr>
+            </table>
+        </section>
+
+    <!--Botão de salvar-->
+    <button onclick="buttonConsultarMedida()" class="consultarMedidas">Consultar</button>
+
+
+    </div>
+
+   <!--link com o arquivo script.js-->
+   <script src="scripts.js"></script>
+</body>
+</html>
