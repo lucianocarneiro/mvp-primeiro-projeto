@@ -37,7 +37,7 @@ Este projeto fornece uma API RESTful desenvolvida com **Flask** e **SQLAlchemy**
 
 ### 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/seu-repo.git
+git clone https://github.com/dipucriodigital/desenvolvimento-full-stack.git
 cd seu-repo
 ```
 
@@ -63,9 +63,21 @@ pip install -r requirements.txt
 python app.py
 ```
 
+Para executar a API  basta executar:
+
+```
+flask run --host 0.0.0.0 --port 5000
+```
+
 A API estará disponível em: [http://localhost:5000](http://localhost:5000)
 
 ---
+
+Para reiniciar a aplicação, basta executar o comando a seguir:
+
+```
+(env)$ flask run --host 0.0.0.0 --port 5000 --reload
+```
 
 ## Endpoints Disponíveis
 
