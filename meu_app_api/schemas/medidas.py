@@ -6,7 +6,7 @@ from datetime import datetime, date #import de modelo de data para utilizar na d
 class MedidasBuscaSchema(BaseModel):
     """ Define como uma medida será retornada.
     """
-    nome_completo: str = "Luciano de Oliveira Carneiro"
+    nome: str = "Luciano de Oliveira Carneiro"
     data_peso: str = "2025-03-25 00:00:00.000000"
     
 class MedidasBuscaListaSchema(BaseModel):

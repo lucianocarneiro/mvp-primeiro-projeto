@@ -46,10 +46,7 @@ const getMedidasList = async () => {
       console.error('Erro ao buscar dados:', error);
     });
     
-    // limpando os campos
-    document.getElementById("nomeConsulta").value = "";
-    document.getElementById("dataConsulta").value = "";
-    
+   
 };
 /*
   --------------------------------------------------------------------------------------

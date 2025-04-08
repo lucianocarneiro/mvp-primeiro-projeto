@@ -32,7 +32,7 @@ def home():
 @app.get('/medidas', tags=[medidas_tag], 
          responses={"200": medidas.MedidasViewSchema, "404": error.ErrorSchema})
 def get_medidas(query: medidas.MedidasBuscaSchema):
-    """Faz a busca de um produto a partir do nome completo do usuário.
+    """Faz a busca de um medida a partir do nome completo do usuário.
     """
     medidas_nome = query.nome
     #medidas_data = query.data_peso
@@ -107,7 +107,7 @@ def add_medidas(form: medidas.MedidasSchema):
 def delete_medidas(query: medidas.MedidasBuscaSchema):
     """Deleta uma medida da base de dados a partir do nome completo e da data do peso."""
 
-    medidas_nome = query.nome_completo
+    medidas_nome = query.nome
     
     try:
         medidas_data = datetime.strptime(query.data_peso, "%Y-%m-%d %H:%M:%S.%f")
@@ -142,17 +142,17 @@ def get_medidas_list(query: medidas.MedidasBuscaListaSchema):
 
     Retorna uma representação da listagem das medidas.
     """
-    logger.debug(f"Coletando produtos ")
+    logger.debug(f"Coletando medida:")
     # criando conexão com o banco de dados
     session = Session()
     
     # Realizando a consulta no banco com os filtros de nome e data_peso
-    medidas_query = session.query(Medidas)
+    medidas_query = session.query(Medidas).filter(Medidas.nome_completo == query.nome)
     medidas = medidas_query.all()
     
     if not medidas:
         # Caso não encontre nenhuma medida que atenda aos filtros
-        return {"produtos": []}, 200
+        return {"medidas": []}, 200
     else:
         # Retorna a lista com as medidas encontradas
         return {"medidas": [apresenta_medidas(medida) for medida in medidas]}, 200
